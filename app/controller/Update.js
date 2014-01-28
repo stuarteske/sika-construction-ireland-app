@@ -71,20 +71,20 @@ Ext.define('app.controller.Update', {
             && navigationDataStore.isReady()
             && infoDataStore.isReady()
             ) {
-            console.log('Data Stores are ready.');
+            this.log('Data Stores are ready.');
 
             thisObj.updateSectionData();
 
         } else {
             var dbRetry = function () {
-                console.log('Testing databases again');
+                thisObj.log('Testing databases again');
                 this.updateAppData();
             };
             var delayedDbRetry = Ext.Function.createDelayed(dbRetry, 500, this);
 
             delayedDbRetry();
 
-            console.log('Databases are not ready.');
+            thisObj.log('Databases are not ready.');
         }
     },
 
@@ -244,14 +244,22 @@ Ext.define('app.controller.Update', {
             }
         });
 
-        // Query region update
-        infoDataStore.checkDataVersionAndUpdateDateIfRequired();
+
+
+        infoDataStore.removeAllRecords();
+        infoDataStore.removeAllRecords();
+
+        setTimeout(function() {
+            infoDataStore.checkDataVersionAndUpdateDateIfRequired();
+        },1000);
+
+
     },
 
     updateAppDataComplete: function() {
         var thisObj = this;
 
-        console.log('Getting ready to change back');
+        thisObj.log('Getting ready to change back');
 
         var delayedFunction = Ext.Function.createDelayed(function () {
             location.reload();
