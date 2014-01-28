@@ -29,7 +29,7 @@ Ext.define('app.store.Base', {
     },
 
     removeAllTableData: function(tableName) {
-        console.log('Removing Record ready');
+        //console.log('Removing Record ready');
 
         // Make the sql connection
         var db = this.getDatabaseConnection();
@@ -37,7 +37,7 @@ Ext.define('app.store.Base', {
         // Do the transaction
         db.transaction(function (tx) {
             tx.executeSql('DELETE FROM ' + tableName, [], function (tx, results) {});
-            console.log('Run the sql');
+            //console.log('Run the sql');
         });
     },
 
@@ -104,27 +104,60 @@ Ext.define('app.store.Base', {
             var returnFlag = false;
 
             if (record.get('categories') != '') {
-                var regions = Ext.JSON.decode(
-                    record.get('categories')
+
+                //console.log('Categorie JSON: ');
+                //console.log(record.get('categories'));
+                //console.log(' ');
+
+                var attachedSectors = Ext.JSON.decode(
+                    record.get('categories'),
+                    false
                 );
+
+                //console.log('Attached Sectors: ');
+                //console.log(attachedSectors);
+                //console.log(attachedSectors.length);
+                //console.log(' ');
 
                 var returnFlag = false;
 
-                Ext.each(regions, function(item){
-                    item.urlId = item.urlId.toLowerCase();
-                    item.urlId = item.urlId.replace(/ /g,"-");
+                if (attachedSectors.length) {
+                    Ext.each(attachedSectors, function(item){
+                        //console.log('Item Object');
+                        //console.log(item);
+                        //console.log(item.urlId);
+                        //console.log(' ');
 
-                    //console.log('Found Key: ' + item.urlId);
+                        if (item.urlId) {
+                            item.urlId = item.urlId.toLowerCase();
+                            item.urlId = item.urlId.replace(/ /g,"-");
 
-                    if (item.urlId === categoryString) {
-                        //console.log('Matched Key: ' + item.urlId);
-                        returnFlag = true;
-                    }
-                })
+                            //console.log('Found Key: ' + item.urlId);
+
+                            if (item.urlId === categoryString) {
+                                //console.log('Matched Key: ');
+                                //console.log(item.urlId);
+                                //console.log(' ');
+
+                                returnFlag = true;
+                            }
+                        }
+                    })
+                }
             }
+
+            //console.log('Return Flag: ');
+            //console.log(returnFlag);
+            //console.log(' ');
 
             return returnFlag;
         }, this);
+
+        //console.log('Return Objects: ');
+        //console.log(tempStore);
+        //console.log(' ');
+        //console.log('---------');
+        //console.log(' ');
 
         return tempStore;
     },
@@ -134,7 +167,7 @@ Ext.define('app.store.Base', {
         solutionString = solutionString.toLowerCase();
         solutionString = solutionString.replace(/ /g,"-");
 
-        console.log('Search Key: ' + solutionString);
+        //console.log('Search Key: ' + solutionString);
 
         var tempStore = new app.store.Base();
 
@@ -149,17 +182,23 @@ Ext.define('app.store.Base', {
 
                 var returnFlag = false;
 
-                Ext.each(records, function(item){
-                    item.urlId = item.urlId.toLowerCase();
-                    item.urlId = item.urlId.replace(/ /g,"-");
+                if (records.length) {
 
-                    console.log('Found Key: ' + item.urlId);
+                    Ext.each(records, function(item){
 
-                    if (item.urlId === solutionString) {
-                        console.log('Matched Key: ' + item.urlId);
-                        returnFlag = true;
-                    }
-                })
+                        if (item.urlId) {
+                            item.urlId = item.urlId.toLowerCase();
+                            item.urlId = item.urlId.replace(/ /g,"-");
+
+                            //console.log('Found Key: ' + item.urlId);
+
+                            if (item.urlId === solutionString) {
+                                //console.log('Matched Key: ' + item.urlId);
+                                returnFlag = true;
+                            }
+                        }
+                    });
+                }
             }
 
             return returnFlag;
