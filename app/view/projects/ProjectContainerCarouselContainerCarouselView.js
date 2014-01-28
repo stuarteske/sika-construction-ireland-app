@@ -8,7 +8,7 @@ Ext.define('app.view.projects.ProjectContainerCarouselContainerCarouselView', {
     },
 
     initialize: function() {
-        console.log('app.view.projects.ProjectContainerCarouselContainerCarouselView');
+        //console.log('app.view.projects.ProjectContainerCarouselContainerCarouselView');
 
         // get the image data form the json  encoded string
         var jsonImagesString = this.getRecord().get('Image');

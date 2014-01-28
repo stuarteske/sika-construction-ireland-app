@@ -20,7 +20,7 @@ Ext.application({
     name: 'app',
 
     // app.app.debugMode;
-    debugMode: true,
+    debugMode: false,
 
     requires: [
         'Ext.MessageBox'

@@ -23,7 +23,7 @@ Ext.define('app.view.projects.ProjectContainerView', {
                     function(event, node, options, eOpts) {
                         switch (event.direction) {
                             case 'right':
-                                console.log('Swipe right');
+                                //console.log('Swipe right');
                                 this.fireEvent('swipeRight', this);
                                 break;
                             case 'left':
@@ -41,7 +41,7 @@ Ext.define('app.view.projects.ProjectContainerView', {
     },
 
     initialize: function() {
-        console.log('app.view.projects.ProjectContainerView');
+        //console.log('app.view.projects.ProjectContainerView');
 
         this.setItems([
             {

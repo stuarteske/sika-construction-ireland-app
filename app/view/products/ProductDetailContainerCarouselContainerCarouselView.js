@@ -8,7 +8,7 @@ Ext.define('app.view.products.ProductDetailContainerCarouselContainerCarouselVie
     },
 
     initialize: function() {
-        console.log('app.view.products.ProductDetailContainerCarouselContainerCarouselView');
+        //console.log('app.view.products.ProductDetailContainerCarouselContainerCarouselView');
 
         // get the image data form the json  encoded string
         var jsonImagesString = this.getRecord().get('Image');

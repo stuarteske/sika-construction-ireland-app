@@ -38,7 +38,7 @@ Ext.define('app.view.info.InfoPageDetailContainerView', {
     },
 
     initialize: function() {
-        console.log('app.view.info.InfoPageDetailContainerView');
+        //console.log('app.view.info.InfoPageDetailContainerView');
 
         this.setItems([
             {
