@@ -8,6 +8,7 @@ Ext.define('app.store.ImageData', {
     },
 
     config :{
+        debugMode: true,
         model: 'app.model.Images',
         storeId: "ImageData",
         autoLoad: true,
@@ -17,16 +18,16 @@ Ext.define('app.store.ImageData', {
                 this.verifySqlData('Sarnafill', 'Images', 'imageId');
             },
             updaterecord : function() {
-                console.log("ImageData Update Record");
+                this.log("ImageData Update Record");
             },
             recordVerified: function(recordId) {
-                console.log("ImageData Verification Record: " + recordId);
+                this.log("ImageData Verification Record: " + recordId);
             },
             sync: function() {
-                console.log("ImageData Sync");
+                this.log("ImageData Sync");
             },
             save: function() {
-                console.log("ImageData Save");
+                this.log("ImageData Save");
             }
         }
     },

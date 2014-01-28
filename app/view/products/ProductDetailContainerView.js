@@ -18,7 +18,7 @@ Ext.define('app.view.products.ProductDetailContainerView', {
     },
 
     initialize: function() {
-        console.log('app.view.products.ProductDetailContainerView');
+        //console.log('app.view.products.ProductDetailContainerView');
 
         this.setItems([
             {

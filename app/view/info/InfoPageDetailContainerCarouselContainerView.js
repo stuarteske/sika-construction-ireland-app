@@ -15,7 +15,7 @@ Ext.define('app.view.info.InfoPageDetailContainerCarouselContainerView', {
     },
 
     initialize: function() {
-        console.log('app.view.info.InfoPageDetailContainerCarouselContainerView');
+        c//onsole.log('app.view.info.InfoPageDetailContainerCarouselContainerView');
 
         this.setItems([
             {

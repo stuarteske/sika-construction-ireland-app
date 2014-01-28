@@ -15,7 +15,7 @@ Ext.define('app.view.projects.ProjectContainerCarouselContainerView', {
     },
 
     initialize: function() {
-        console.log('app.view.projects.ProjectContainerCarouselContainerView');
+        //console.log('app.view.projects.ProjectContainerCarouselContainerView');
 
         this.setItems([
             {

@@ -230,6 +230,7 @@ Ext.define('app.store.InfoPageData', {
     },
 
     removeAllRecords: function () {
+
         this.removeAllTableData('InfoData');
 
         if (this.getTotalCount() > 0) {
@@ -251,8 +252,7 @@ Ext.define('app.store.InfoPageData', {
 //            this.load();
 //        }
 
-        if (this.getTotalCount() > 0) return false;
-        else true;
+        return this.getTotalCount();
     },
 
     retrievedExternalData: function(data) {
