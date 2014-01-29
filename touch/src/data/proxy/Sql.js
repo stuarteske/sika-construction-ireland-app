@@ -64,7 +64,7 @@ Ext.define('Ext.data.proxy.Sql', {
          * @cfg {String} database
          * Database name to access tables from
          */
-        database: 'Sarnafill',
+        database: 'conireland',
 
         columns: '',
 

@@ -15,7 +15,7 @@ Ext.define('app.store.ImageData', {
         listeners: {
             load: function() {
                 // Verify the data
-                this.verifySqlData('Sarnafill', 'Images', 'imageId');
+                this.verifySqlData('conireland', 'Images', 'imageId');
             },
             updaterecord : function() {
                 this.log("ImageData Update Record");

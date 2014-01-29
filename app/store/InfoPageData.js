@@ -120,11 +120,11 @@ Ext.define('app.store.InfoPageData', {
     },
 
     getAjaxDataUrl: function() {
-        return 'http://construction.sika.cfadigital.com/api/Information.php';
+        return 'http://construction.ireland.sika.cfadigital.com/api/Information.php';
     },
 
     getAjaxUpdateUrl: function() {
-        return 'http://construction.sika.cfadigital.com/api/Information.php?update=1';
+        return 'http://construction.ireland.sika.cfadigital.com/api/Information.php?update=1';
     },
 
     getOfflineData: function() {

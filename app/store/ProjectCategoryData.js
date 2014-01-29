@@ -91,11 +91,11 @@ Ext.define('app.store.ProjectCategoryData', {
     },
 
     getAjaxDataUrl: function() {
-        return 'http://construction.sika.cfadigital.com/api/sectors.php';
+        return 'http://construction.ireland.sika.cfadigital.com/api/sectors.php';
     },
 
     getAjaxUpdateUrl: function() {
-        return 'http://construction.sika.cfadigital.com/api/sectors.php?update=1';
+        return 'http://construction.ireland.sika.cfadigital.com/api/sectors.php?update=1';
     },
 
     getOfflineData: function() {
