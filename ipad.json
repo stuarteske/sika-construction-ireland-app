@@ -5,13 +5,13 @@
      * This is the name of your application, which is displayed on the device when the app is installed. On IOS, this should match
      * the name of your application in the Apple Provisioning Portal.
      */
-    "applicationName":"Sika Construction",
+    "applicationName":"Sika Ireland",
 
     /**
      * @cfg {String} applicationId
      * This is the name namespace for your application. On IOS, this should match the name of your application in the Apple Provisioning Portal.
      */
-    "applicationId":"com.cfadigital.construction.sika",
+    "applicationId":"com.cfadigital.sika.ireland.construction",
 
     /**
      * @cfg {String} bundleSeedId
@@ -63,7 +63,7 @@
      * @required
      * This is where the built application file with be saved. Make sure that output path is not in your input path, you may get into endless recursive copying
      */
-    "outputPath":"../sika_construction_app_build/",
+    "outputPath":"../sika_construction_ireland_app_build/",
 
     /**
      * @cfg {String} configuration
@@ -130,7 +130,7 @@
      *
      * org : "provisionProfile":"/users/James/dev/certificates/Sika_Liquid_Plastics_App_Dist_NEWEST.mobileprovision",
      */
-    "provisionProfile":"/users/James/dev/sika_construction_app_build/Sika_Construction_App.mobileprovision",
+    "provisionProfile":"/users/James/dev/sika_construction_ireland_app_build/Sika_Construction_Ireland_App_Dist.mobileprovision",
 
     /**
      * @cfg {String} URLScheme
