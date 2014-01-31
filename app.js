@@ -24,7 +24,7 @@ Ext.application({
     // app.app.apiUrl;
     apiUrl : 'http://construction.ireland.sika.cfadigital.com/api/',
     // app.app.dbName;
-    dbName: 'consika',
+    dbName: 'conireland',
 
     requires: [
         'Ext.MessageBox'
