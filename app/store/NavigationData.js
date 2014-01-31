@@ -108,11 +108,11 @@ Ext.define('app.store.NavigationData', {
     },
 
     getAjaxDataUrl: function() {
-        return 'http://construction.ireland.sika.cfadigital.com/api/AppMenu.php';
+        return app.app.apiUrl + 'AppMenu.php';
     },
 
     getAjaxUpdateUrl: function() {
-        return 'http://construction.ireland.sika.cfadigital.com/api/AppMenu.php?update=1';
+        return app.app.apiUrl + 'AppMenu.php?update=1';
     },
 
     getOfflineData: function() {

@@ -15,12 +15,6 @@ Ext.define('app.store.SettingsData', {
             load: function() {
                 this.setIsReady(true);
             },
-//            beforesync: function() {
-//                console.log("SettingsData Before Sync");
-//            },
-//            refresh: function() {
-//                console.log("SettingsData Refresh");
-//            },
             updaterecord : function() {
                 console.log("SettingsData Update Record");
             },

@@ -141,7 +141,7 @@ Ext.define('app.controller.Sectors', {
             var afterDataLoad = function () {
                 Ext.Viewport.setMasked(false);
 
-                ProjectDataStore.verifySqlData('conireland', 'Projects', 'slug');
+                ProjectDataStore.verifySqlData(app.app.dbName, 'Projects', 'slug');
 
                 // Load the main view
                 this.getMainView().push({

@@ -35,7 +35,7 @@ Ext.define('app.store.ProjectData', {
                 this.log("ProjectData load");
                 thisObj.setIsReady(true);
 
-                thisObj.verifySqlData('conireland', 'Projects', 'slug');
+                thisObj.verifySqlData(app.app.dbName, 'Projects', 'slug');
             },
             metachange: function( thisObj, data, eOpts ) {
                 this.log("ProjectData metachange");
@@ -92,11 +92,11 @@ Ext.define('app.store.ProjectData', {
     },
 
     getAjaxDataUrl: function() {
-        return 'http://construction.ireland.sika.cfadigital.com/api/Projects.php';
+        return app.app.apiUrl + 'Projects.php';
     },
 
     getAjaxUpdateUrl: function() {
-        return 'http://construction.ireland.sika.cfadigital.com/api/Projects.php?update=1';
+        return app.app.apiUrl + 'Projects.php?update=1';
     },
 
     getOfflineData: function() {
